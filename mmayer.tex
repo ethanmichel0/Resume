@@ -1,0 +1,87 @@
+\documentclass[10pt,a4paper,ragged2e]{altacv}
+\usepackage{multicol}
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+\geometry{left=2cm,right=11cm,marginparwidth=8cm,marginparsep=1.2cm,top=2cm,bottom=1.25cm}
+\ifxetexorluatex
+  \setmainfont{Carlito}
+\else
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
+\fi
+\definecolor{VividPurple}{HTML}{000000}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{2E2E2E}
+\colorlet{heading}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Ethan Michel}
+\tagline{Oberlin College}
+% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+%\photo{3.3cm}{profile.jpg}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{ethanmichel303@gmail.com}
+%   \phone{000-00-0000}
+%  \mailaddress{Address, Street, 00000 County}
+  \location{Boulder, CO}
+%  \homepage{marissamayr.tumblr.com/}
+%  \twitter{@marissamayer}
+  \linkedin{https://www.linkedin.com/in/ethan-michel-0b926685}
+%   \orcid{orcid.org/0000-0000-0000-0000} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+\cvsection[page1sidebar]{Work Experience}
+
+\cvevent{Software Engineer Intern}{SmartEtailing}{Aug -- Dec 2020}{Boulder, CO}
+\begin{itemize}
+\item Led a project to make the previously Windows-hosted legacy Coldfusion codebase compatible with Linux by making code changes and configuring servers. This kick-started the switch of over 10 virtual machines from Windows to Linux.
+
+\smallskip
+\item Created and updated RESTful API endpoints across multiple Spring Boot microservices to make the process of setting a store as inactive 50\% faster.
+\smallskip
+\item Improved the merchant provisioning page by creating an interactive Vue js page utilizing Vuex state management. This allowed internal employees to view and change the merchants' status.
+\smallskip
+\item Member of 2 different scrum teams. Actively participated in daily stand ups, sprint planning, reviews, and retrospectives, and embraced scrum values.
+\end{itemize}
+
+\divider
+
+\cvevent{Software Engineer Intern}{Environmental Dashboard}{June - Aug 2020}{Oberlin, OH}
+\begin{itemize}
+\item Created a custom feature that interpreted spreadsheets, allowing content managers to upload multiple records at once. This involved a database redesign, multiple layers of validation, and creating an interactive page allowing users to manipulate spreadsheet data and react to errors. Reduced the time users needed to upload batches of records by 75\%.
+\item Independently managed and fixed multiple bugs in a full-stack codebase utilizing N-Tiered and MVC architectures without prior experience in PHP, APIs, or web development.
+\end{itemize}
+
+\divider
+
+\cvevent{Research Intern}{University of Colorado Boulder}{Jan - Feb 2020}{Boulder, CO}
+\begin{itemize}
+\item Developed an algorithm to estimate the density of algae based on photos of a culture.
+\item Member of an interdisciplinary team with master's and PhD students who worked in design, biology, chemistry, and art.
+\end{itemize}
+%\divider
+
+\end{document}
